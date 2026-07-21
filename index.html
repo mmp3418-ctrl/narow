@@ -75,7 +75,6 @@
         .bg-orb-2 { width:250px; height:250px; background:var(--gold-light); bottom:10%; left:3%; animation:orbF 14s ease-in-out infinite; animation-delay:-7s; }
         @keyframes orbF { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(25px,-15px) scale(1.1)} 66%{transform:translate(-15px,20px) scale(0.9)} }
 
-        /* ==================== HEADER ==================== */
         .header {
             position:fixed; top:0; left:0; width:100%; z-index:1000;
             background:rgba(47,47,47,0.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
@@ -105,7 +104,6 @@
         .hamburger.active span:nth-child(2){opacity:0}
         .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
-        /* ==================== HERO ==================== */
         .hero { min-height:90vh; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; padding:120px 0 60px; }
         .hero-content { text-align:center; max-width:650px; margin:0 auto; }
         .hero-badge {
@@ -126,7 +124,6 @@
         .btn-outline { background:transparent; border:2px solid var(--gold-main); color:var(--gold-main); }
         .btn-outline:hover { background:var(--gold-gradient); color:var(--icon-charcoal); transform:translateY(-3px); }
 
-        /* ==================== AGENT BADGE ==================== */
         .agent-badge {
             display:inline-flex; align-items:center; gap:8px;
             background:rgba(223,157,59,0.1); border:2px solid var(--gold-main);
@@ -137,7 +134,6 @@
         @keyframes agentGlow { 0%,100%{box-shadow:0 0 15px rgba(223,157,59,0.2)} 50%{box-shadow:0 0 30px rgba(223,157,59,0.4)} }
         .agent-badge i { color:var(--gold-main); }
 
-        /* ==================== SECTIONS ==================== */
         .section { padding:60px 0; position:relative; z-index:1; }
         .section-dark { background:var(--bg-charcoal2); }
         .section-badge {
@@ -149,7 +145,6 @@
         .section-title { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:var(--text-white); margin-bottom:0.5rem; font-family:var(--font-heading); }
         .section-desc { color:var(--text-muted); max-width:500px; margin:0 auto 2rem; font-size:0.9rem; line-height:1.8; padding:0 10px; }
 
-        /* ==================== ABOUT ==================== */
         .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:950px; margin:0 auto; align-items:center; }
         .about-text { color:var(--text-muted); font-size:0.9rem; line-height:2; }
         .about-text strong { color:var(--gold-light); font-weight:700; }
@@ -162,7 +157,6 @@
         .about-card i { font-size:2rem; color:var(--gold-main); margin-bottom:0.8rem; }
         .about-card h3 { color:var(--text-white); margin-bottom:0.3rem; font-size:1rem; }
 
-        /* ==================== SERVICES ==================== */
         .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.2rem; max-width:950px; margin:0 auto; }
         .service-card {
             background:var(--bg-card); border:1px solid var(--border-gold2);
@@ -185,7 +179,6 @@
         .service-card h3 { color:var(--text-white); margin-bottom:0.3rem; font-size:1rem; }
         .service-card p { color:var(--text-muted); font-size:0.82rem; line-height:1.6; }
 
-        /* ==================== PRODUCTS ==================== */
         .prod-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; max-width:900px; margin:0 auto; }
         .prod-card {
             background:var(--bg-card); border:1px solid var(--border-gold2);
@@ -198,7 +191,6 @@
         .prod-card:hover .prod-img img { transform:scale(1.06); }
         .prod-img .ph { font-size:2.5rem; color:var(--text-dim); }
 
-        /* ==================== CONTACT ==================== */
         .contact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1rem; max-width:750px; margin:0 auto; }
         .contact-card {
             background:var(--bg-card); border:1px solid var(--border-gold2);
@@ -225,7 +217,6 @@
         }
         .contact-link:hover { background:var(--gold-gradient); color:var(--icon-charcoal); }
 
-        /* ==================== FOOTER ==================== */
         .footer {
             background:var(--bg-charcoal2); border-top:1px solid var(--border-gold2);
             padding:35px 0 18px; text-align:center; position:relative; z-index:1;
@@ -255,15 +246,9 @@
         .btt.show { opacity:1; visibility:visible; }
         .btt:hover { transform:scale(1.1); }
 
-        /* ==================== RESPONSIVE ==================== */
         @media(max-width:768px){
             .header { padding:8px 0; }
-            .nav-links {
-                display:none; position:absolute; top:58px; left:0; width:100%;
-                background:var(--bg-card); flex-direction:column; padding:1.5rem;
-                border-radius:0 0 var(--radius-md) var(--radius-md);
-                border:1px solid var(--border-gold2); gap:1rem;
-            }
+            .nav-links { display:none; position:absolute; top:58px; left:0; width:100%; background:var(--bg-card); flex-direction:column; padding:1.5rem; border-radius:0 0 var(--radius-md) var(--radius-md); border:1px solid var(--border-gold2); gap:1rem; }
             .nav-links.open { display:flex; }
             .hamburger { display:block; }
             .about-grid { grid-template-columns:1fr; }
@@ -315,21 +300,30 @@
         <section class="hero" id="home"><div class="container"><div class="hero-content" data-aos="fade-up">
             <span class="hero-badge"><i class="fas fa-shield-halved"></i> أمن وسلامة رقمية</span>
             <h1>شركة <span class="gold-text">السهم الذهبي</span></h1>
-            <p class="hero-desc">لكاميرات المراقبة وتقنية المعلومات. نؤمن منشأتك بأحدث التقنيات لحماية ما يهمك.</p>
+            <p class="hero-desc">للتقنية المعلومات. نؤمن منشأتك بأحدث أنظمة المراقبة وحلول الأمن الذكي.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-gold"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
                 <a href="#products" class="btn btn-outline"><i class="fas fa-box-open"></i> منتجاتنا</a>
             </div>
-            <!-- وكيل HIKVISION -->
             <div class="agent-badge">
-                <i class="fas fa-certificate"></i> وكيل معتمد لشركة <strong>HIKVISION</strong>
+                <i class="fas fa-certificate"></i> موزع معتمد لشركة <strong>HIKVISION</strong>
             </div>
         </div></div></section>
 
         <section class="section section-dark" id="about"><div class="container">
             <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-info-circle"></i> من نحن</span><h2 class="section-title">عن <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">السهم الذهبي</span></h2></div>
             <div class="about-grid">
-                <div data-aos="fade-left"><p class="about-text"><strong>شركة السهم الذهبي</strong> هي شركة ليبية رائدة في مجال <strong>كاميرات المراقبة وأنظمة الأمن</strong> وتقنية المعلومات، وكيل معتمد لشركة <strong>HIKVISION</strong> العالمية. نقدم حلولاً متكاملة تشمل التركيب والصيانة والاستشارات التقنية.</p></div>
+                <div data-aos="fade-left">
+                    <p class="about-text">
+                        <strong>تفخر شركة السهم الذهبي للتقنية المعلومات</strong> بكونها <strong>موزعًا معتمدًا</strong> لمنتجات <strong>Hikvision</strong> في ليبيا، الشركة العالمية الرائدة في مجال أنظمة المراقبة الأمنية وحلول الأمن الذكي.
+                    </p>
+                    <p class="about-text" style="margin-top:1rem;">
+                        نلتزم بتوفير <strong>المنتجات الأصلية</strong> من Hikvision، مع تقديم خدمات البيع، والاستشارات الفنية، والدعم الفني، وخدمات ما بعد البيع، بما يضمن لعملائنا أعلى مستويات الجودة والموثوقية.
+                    </p>
+                    <p class="about-text" style="margin-top:1rem;">
+                        نسعى إلى تزويد الأفراد والشركات والمؤسسات <strong>بأحدث حلول المراقبة والأمن</strong>، مع الالتزام بأفضل المعايير العالمية ورضا العملاء.
+                    </p>
+                </div>
                 <div class="about-card" data-aos="fade-right"><i class="fas fa-cctv"></i><h3>خبرة واحترافية</h3><p style="color:var(--text-muted);">فريق متخصص في أنظمة المراقبة</p></div>
             </div>
         </div></section>
@@ -337,10 +331,10 @@
         <section class="section" id="services"><div class="container">
             <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-list-check"></i> خدماتنا</span><h2 class="section-title">ماذا <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">نقدم</span></h2><p class="section-desc">حلول تقنية متكاملة تلبي احتياجات الأفراد والشركات.</p></div>
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="50"><div class="service-icon"><i class="fas fa-video"></i></div><h3>كاميرات HIKVISION</h3><p>توريد وتركيب كاميرات HIKVISION</p></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="50"><div class="service-icon"><i class="fas fa-video"></i></div><h3>كاميرات HIKVISION</h3><p>توريد وتركيب كاميرات أصلية</p></div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100"><div class="service-icon"><i class="fas fa-network-wired"></i></div><h3>شبكات</h3><p>شبكات سلكية ولاسلكية متطورة</p></div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="150"><div class="service-icon"><i class="fas fa-server"></i></div><h3>خوادم وتخزين</h3><p>حلول تخزين متطورة</p></div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200"><div class="service-icon"><i class="fas fa-tools"></i></div><h3>صيانة ودعم</h3><p>دعم فني على مدار الساعة</p></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200"><div class="service-icon"><i class="fas fa-tools"></i></div><h3>صيانة ودعم</h3><p>دعم فني واستشارات</p></div>
             </div>
         </div></section>
 
@@ -371,7 +365,7 @@
 
     <footer class="footer"><div class="container">
         <div class="footer-brand">السهم <span>الذهبي</span></div>
-        <p style="color:var(--text-muted);margin-bottom:0.5rem;font-size:0.85rem;">وكيل معتمد لشركة HIKVISION</p>
+        <p style="color:var(--text-muted);margin-bottom:0.5rem;font-size:0.85rem;">موزع معتمد لشركة HIKVISION</p>
         <div class="footer-links"><a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#products">المنتجات</a><a href="#contact">اتصل بنا</a></div>
         <div class="footer-social">
             <a href="https://m.facebook.com/story.php?story_fbid=pfbid036kZr5Jx2ZaQxDT5jkv8bTLB1CzRnAQhefwDpZTcoPmEvuZiUHGt14gnJijhchVTal&id=100070485722936&sfnsn=mo&mibextid=RUbZ1f" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
@@ -379,7 +373,7 @@
             <a href="https://wa.me/218915497990" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
             <a href="https://maps.app.goo.gl/pwRtD4q9YMAXpuwE9" target="_blank" aria-label="الموقع"><i class="fas fa-map-marker-alt"></i></a>
         </div>
-        <div class="footer-bottom">© 2025 شركة السهم الذهبي - وكيل HIKVISION. جميع الحقوق محفوظة.</div>
+        <div class="footer-bottom">© 2025 شركة السهم الذهبي للتقنية المعلومات - موزع معتمد HIKVISION. جميع الحقوق محفوظة.</div>
     </div></footer>
 
     <button class="btt" id="btt"><i class="fas fa-chevron-up"></i></button>
